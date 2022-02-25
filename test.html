@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="./script/index.css" rel="stylesheet">
+    <title>16PersonalitiesType测试中文版</title>
+    <link rel="stylesheet" type="text/css" href="./script/chunk-bb115c5a.f35a3b8a.css">
+    <link rel="stylesheet" type="text/css" href="./script/chunk-37ee2be4.d59e8424.css">
+    <style type="text/css">
+        .mx-tip-panel:focus {
+            outline: 0;
+        }
+
+        .mx_keyword {
+            line-height: 20px;
+            color: #333333;
+            font-size: 14px;
+            letter-spacing: 0.2px;
+            font-family: PingFangSC-Semibold;
+        }
+
+        .mx-scrollbar::-webkit-scrollbar {
+            width: 8px;
+            height: 1px;
+        }
+
+        .mx-scrollbar {
+            overflow-y: auto;
+            max-height: 380px;
+        }
+
+        .mx-scrollbar::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background: #C0C0C0;
+        }
+
+        .mx-scrollbar::-webkit-scrollbar-track {
+            border-radius: 4px;
+            background: #eeeeee;
+        }
+
+        .maxthon_tip {
+            background-color: white;
+            border: none;
+        }
+
+        .maxthon_tip:active {
+            background-color: #E6F4FF;
+            border: 1px solid #449EFB;
+        }
+
+        .maxthon_tip:hover {
+            background-color: #E6F4FF;
+            border: 1px solid #449EFB;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./script/chunk-657532bf.9f1f009e.css">
+    <link rel="stylesheet" type="text/css" href="./script/chunk-3e0e7d90.c3b14e2b.css">
+    <script type="text/javascript" src="./script/jquery-1.8.1.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <section class="el-container is-vertical">
+            <header class="el-header" style="height: 60px;">
+                <div class="el-page-header">
+                    <div class="el-page-header__content" style="font-size:10px;">
+                        16PersonalitiesType测试（非迫选可回退修改，比迫选型MBTI测试更人性）</div>
+                </div>
+            </header>
+            <div class="fullHeight">
+
+                <section data-v-1e05c3dc="">
+                    <div data-v-1e05c3dc="" class="answer-wrap">
+                        <div data-v-1e05c3dc="" class="el-card box-card is-always-shadow">
+                            <div class="el-card__header">
+                                <div data-v-1e05c3dc=""><span data-v-1e05c3dc="">请选择一个最能描述你的
+                                        (右绿代表同意，左红代表不同意，圆圈越大表示倾向越强。灰色代表中立)</span></div>
+                            </div>
+                            <div class="el-card__body">
+                                <div data-v-1e05c3dc="" class="step">
+                                    <div data-v-1e05c3dc="" id="currNum" class="num"></div>
+                                    <div data-v-1e05c3dc="" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                        aria-valuemax="100"
+                                        class="el-progress progress el-progress--line el-progress--without-text">
+                                        <div class="el-progress-bar">
+                                            <div class="el-progress-bar__outer" style="height: 6px;">
+                                                <div class="el-progress-bar__inner" style="width: 0%;">
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div data-v-273bb5a9="" class="footer">
+                    <div data-v-273bb5a9="">
+                        <div data-v-273bb5a9="">网页修改自 <a data-v-273bb5a9="" href="https://www.apesk.com/" title="才储"
+                                target="_blank">APESK.COM</a> 仅供内部使用</div>
+                        <div data-v-273bb5a9=""> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <style>
+        .cardHidden {
+            display: none;
+        }
+    </style>
+
+    <script>
+        var randomtype = -1;
+        var jsonstr = `[{"e":1,"f":0,"id":1,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"无论是在工作还是生活上，我都感觉自己充满了活力，去做任何事都很有激情","q2":""},{"e":0,"f":0,"id":2,"mbtiType":1,"mbtiTypeId":1,"n":1,"p":0,"q1":"比起按部就班的生活，我更喜欢新的挑战","q2":""},{"e":0,"f":1,"id":3,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"在工作的时候，比起领导他人去完成一个项目，我更倾向于做一个协助的角色","q2":""},{"e":0,"f":0,"id":4,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":1,"q1":"任何事情我都不喜欢提前去计划安排什么，更喜欢任由事情发展，顺其自然","q2":""},{"e":1,"f":0,"id":5,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"在聚会的时候，我有很多话可以聊，而且绝对不会冷场","q2":""},{"e":0,"f":0,"id":6,"mbtiType":1,"mbtiTypeId":1,"n":1,"p":0,"q1":"我经常会有一些天马行空的想法，常常会有令人出其不意的新点子","q2":""},{"e":0,"f":1,"id":7,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"我很容易就会被朋友或是同事的观点说服，比起主导，我更喜欢去做辅助性的工作","q2":""},{"e":0,"f":0,"id":8,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":1,"q1":"我没有什么烦恼可言，周围人也都很羡慕我的无忧无虑","q2":""},{"e":1,"f":0,"id":9,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"无论是面对朋友还是同事，我都能和他们有很多话聊，是开心果的角色","q2":""},{"e":0,"f":0,"id":10,"mbtiType":1,"mbtiTypeId":1,"n":1,"p":0,"q1":"我的创造力丰富，也很乐意去接受新事物、观念","q2":""},{"e":0,"f":1,"id":11,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"在与人的交往中，我会很敏感地去注意别人对我的看法与感受，在感情中也是比较容易受伤的那一方","q2":""},{"e":0,"f":0,"id":12,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":1,"q1":"当工作中出现问题的时候，我能迅速想到解决或是补救的方法","q2":""},{"e":1,"f":0,"id":13,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"我希望他们的关注点都放在我身上","q2":""},{"e":0,"f":0,"id":14,"mbtiType":1,"mbtiTypeId":1,"n":1,"p":0,"q1":"当我脑中有一个新的想法时，我会立马就去尝试完成它","q2":""},{"e":0,"f":1,"id":15,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"和朋友一起去吃饭的时候，当我们出现分歧的时候，我会习惯性地顺从对方的意思，压抑自己的需求","q2":""},{"e":0,"f":0,"id":16,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":1,"q1":"他们总说我做事没有条理，没有规划","q2":""},{"e":1,"f":0,"id":17,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"相比隐私,我更注重我的社会地位和社会影响力","q2":""},{"e":0,"f":0,"id":18,"mbtiType":1,"mbtiTypeId":1,"n":1,"p":0,"q1":"在和长辈聊天的时候，我经常会对他们口中那些传统价值观感到无语","q2":""},{"e":1,"f":1,"id":19,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"当朋友不开心的时候，我会觉得是不是自己说错还是做错了什么，没有注意到他的感受才导致对方的不愉快","q2":""},{"e":0,"f":0,"id":20,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":1,"q1":"出现意料之外的事情时，我的大脑一片空白，短时间内也想不到应对的方法","q2":""},{"e":1,"f":0,"id":21,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"到新公司或是新学校，我也能迅速融入集体，交到朋友","q2":""},{"e":0,"f":0,"id":22,"mbtiType":1,"mbtiTypeId":1,"n":1,"p":0,"q1":"我常常会想自己未来是怎么样的，有没有实现目标、过上自己想要的生活","q2":""},{"e":0,"f":1,"id":23,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"我会对朋友的遭遇感到愤慨或是难过，也常常会被电影中那些感人桥段感动得落泪","q2":""},{"e":0,"f":0,"id":24,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":1,"q1":"我做事比较随性，有时可能会被一个视频或是一篇文章就激发兴趣，然后在这种冲动下付出行动","q2":""},{"e":0,"f":0,"id":25,"mbtiType":1,"mbtiTypeId":1,"n":1,"p":0,"q1":"我经常会有灵光一闪的奇思妙想","q2":""},{"e":0,"f":1,"id":26,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"朋友都知道，我很在乎他们的感受","q2":""},{"e":0,"f":0,"id":27,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":-1,"q1":"我会规划好我的日常生活，安排好工作、学习和娱乐生活，制定好计划表，我相信自律者更能成功","q2":""},{"e":-1,"f":0,"id":28,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"朋友和同事都说过，我很安静","q2":""},{"e":0,"f":0,"id":29,"mbtiType":1,"mbtiTypeId":1,"n":1,"p":0,"q1":"我的想象力很丰富","q2":""},{"e":0,"f":-1,"id":30,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"和另一半发生争执的时候，我也不会被感情左右我的情绪，而是会很理性和对方探讨事情的对错以及解决的方法","q2":""},{"e":0,"f":0,"id":31,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":1,"q1":"我比较随性，不喜欢把自己的生活安排进圈圈框框的计划表里，那对我来说太折磨了","q2":""},{"e":1,"f":0,"id":32,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"社交活动比宅在家里有趣多了，我很享受和新朋友聊天的过程","q2":""},{"e":0,"f":0,"id":33,"mbtiType":1,"mbtiTypeId":1,"n":1,"p":0,"q1":"重复做同一件事太无聊了，我更喜欢尝试新的事物，面对新的挑战","q2":""},{"e":0,"f":1,"id":34,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"我太在意别人的感受了，在同事讲小话的时候，我总感觉他们口中的主角是我","q2":""},{"e":0,"f":0,"id":35,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":-1,"q1":"出去旅行的时候，我会提前做好攻略，制定计划，并按照计划表上的安排去到每一个景点打卡，说走就走的旅行对我来说是不存在的","q2":""},{"e":0,"f":0,"id":36,"mbtiType":1,"mbtiTypeId":1,"n":0,"p":0,"q1":"我的性取向是 （越往红色圈越偏向男性，越往绿色圈越偏向女性）","q2":""}]`;
+        var data = JSON.parse(jsonstr);
+        for (var i = 0; i < data.length; i++) {
+            var strNextBtn = "";
+            var strPrevBtn = "";
+            var strcardHidden = "";
+            if (i > 0) {
+                strPrevBtn = `<button data-v-1e05c3dc="" type="button"
+                                    class="el-button btn-test el-button--default btn-prev">
+                                    <!---->
+                                    <!----><span>上一题</span>
+                                </button>`;
+                strcardHidden = "cardHidden";
+            }
+            if (i != (data.length - 1)) {
+                strNextBtn = `<button data-v-1e05c3dc="" type="button" disabled="disabled" 
+                                    class="el-button btn-test el-button--primary is-disabled btn-next">
+                                    <!----is-disabled disabled="disabled">
+                                    <!----><span>下一题</span>
+                                </button>`;
+            } else {
+                strNextBtn = `<button data-v-1e05c3dc="" type="button" disabled="disabled" 
+                                    class="el-button btn-test el-button--primary is-disabled btn-submit">
+                                    <!----is-disabled disabled="disabled">
+                                    <!----><span>提交</span>
+                                </button>`;
+            }
+            var strHtml = `<div data-v-1e05c3dc="">
+                                <div data-v-1e05c3dc="" id="card`+ i + `" class="answer-active ` + strcardHidden + `">
+                                    <div data-v-1e05c3dc="" class="answer-content text-center">
+                                        <div data-v-1e05c3dc="" class="tip tip2">`+ data[i].q1 + `</div>
+                                    </div>
+                                    <div data-v-1e05c3dc="" class="check-wrap">
+                                        <section data-v-563ed8a6="" data-v-1e05c3dc=""><label data-v-563ed8a6=""
+                                                class="option"><span data-v-563ed8a6=""
+                                                    class="option-bg1"></span><input class="inputBtn" data-v-563ed8a6="" type="radio"
+                                                    name="`+ i + `" value="-2"><span data-v-563ed8a6=""
+                                                    class="option-on1"></span></label><label data-v-563ed8a6=""
+                                                class="option"><span data-v-563ed8a6=""
+                                                    class="option-bg2"></span><input class="inputBtn" data-v-563ed8a6="" type="radio"
+                                                    name="`+ i + `" value="-1"><span data-v-563ed8a6=""
+                                                    class="option-on2"></span></label><label data-v-563ed8a6=""
+                                                class="option"><span data-v-563ed8a6=""
+                                                    class="option-bg3"></span><input class="inputBtn" data-v-563ed8a6="" type="radio"
+                                                    name="`+ i + `" value="0"><span data-v-563ed8a6=""
+                                                    class="option-on3"></span></label><label data-v-563ed8a6=""
+                                                class="option"><span data-v-563ed8a6=""
+                                                    class="option-bg4"></span><input class="inputBtn" data-v-563ed8a6="" type="radio"
+                                                    name="`+ i + `" value="1"><span data-v-563ed8a6=""
+                                                    class="option-on4"></span></label><label data-v-563ed8a6=""
+                                                class="option"><span data-v-563ed8a6=""
+                                                    class="option-bg5"></span><input class="inputBtn" data-v-563ed8a6="" type="radio"
+                                                    name="`+ i + `" value="2"><span data-v-563ed8a6=""
+                                                    class="option-on5"></span></label></section>
+                                    </div>
+                                    <div data-v-1e05c3dc="" class="answer-content text-center" id="hd_`+ i + `" hidden>
+                                        <div data-v-1e05c3dc="" class="tip tip2">请输入您的名字</div>
+                                        <input id="nm" name="name" type="text"/>
+                                    </div>
+                                    <div data-v-1e05c3dc="" class="btn">
+                                        <input type="hidden" class="currNum" value="`+ i + `" />
+                                        `+ strPrevBtn + `
+                                        `+ strNextBtn + `
+                                        <!---->
+                                    </div>
+                                </div>
+                            </div>`;
+            $(".el-card__body").append(strHtml);
+
+        }
+
+        var dataScore = [];
+        $(function () {
+            $("#currNum").html("1 / " + data.length.toString());
+            if (randomtype == -1) {
+                randomtype = Math.floor(Math.random() * 90000000000);
+            }
+            $(".inputBtn").click(function () {
+                var num = this.name;
+                var score = $('input[name="' + num + '"]').filter(':checked').val();
+                dataScore[num] = score;
+                if (num == (data.length - 1)) {
+                    $("#sex").val(score);
+                    $("#hd_35").show();
+                    $("#card" + num).find(".btn-submit").removeClass("is-disabled");
+                    $("#card" + num).find(".btn-submit").attr("disabled", false);
+                }
+
+                setTimeout(function () {
+                    next(num);
+                    $("#card" + num).find(".btn-next").removeClass("is-disabled");
+                    $("#card" + num).find(".btn-next").attr("disabled", false);
+                }, 500);
+            })
+            $(".btn-next").click(function () {
+                var num = $(this).parent().find(".currNum").val();
+                next(num);
+            })
+            $(".btn-prev").click(function () {
+                var num = $(this).parent().find(".currNum").val();
+                prev(num);
+            })
+            $(".btn-submit").click(function () {
+                var name = document.getElementById('hd_35').getElementsByTagName('input')[0].value;
+                if (name == "") {
+                    alert("请您填写姓名");
+                }
+                var eScore = 0;
+                var fScore = 0;
+                var nScore = 0;
+                var pScore = 0;
+                var isSelect = false;
+                for (var i = 0; i < dataScore.length; i++) {
+                    var num = i;
+                    if (data[num].e != 0) {
+                        eScore += dataScore[num] * parseInt(data[num].e, 10);
+                    }
+                    if (data[num].f != 0) {
+                        fScore += dataScore[num] * parseInt(data[num].f, 10);
+                    }
+                    if (data[num].n != 0) {
+                        nScore += dataScore[num] * parseInt(data[num].n, 10);
+                    }
+                    if (data[num].p != 0) {
+                        pScore += dataScore[num] * parseInt(data[num].p, 10);
+                    }
+
+                    if (parseInt(dataScore[num], 0) != 0) {
+                        isSelect = true;
+                    }
+                }
+
+                if (!isSelect) {
+                    alert("打扰了！");
+                    window.location.reload();
+                } else {
+                    var sex = $("#sex").val();
+                    window.location.href = "./result.html?e="+eScore+"&f="+fScore+"&n="+nScore+"&p="+pScore+"&name="+name+"&rkey="+randomtype;
+                    // var htmlstr = name + `,你的MBTI类型是:` + mbtitype + `\n请您阅读分析后截图或复制文本将结果发至指定邮箱，感谢您的参与。\n` + mbtilist[mbtindex][randomtype];
+                    // alert(htmlstr);
+                }
+            })
+        })
+
+        function next(num) {
+            if (parseInt(num, 10) < (data.length - 1)) {
+                $("#currNum").html((parseInt(num, 10) + 2).toString() + "/" + data.length.toString());
+                $("#card" + num).addClass("cardHidden");
+                $("#card" + (parseInt(num, 10) + 1)).removeClass("cardHidden");
+
+                var perWidth = ((parseInt(num, 10) + 2) / data.length).toFixed(2);
+                $(".el-progress-bar__inner").css("width", "" + perWidth * 100 + "%");
+            }
+        }
+
+        function prev(num) {
+            $("#currNum").html((parseInt(num, 10)).toString() + "/" + data.length.toString());
+            $("#card" + num).addClass("cardHidden");
+            $("#card" + (parseInt(num, 10) - 1)).removeClass("cardHidden");
+
+            var perWidth = ((parseInt(num, 10)) / data.length).toFixed(2);
+            $(".el-progress-bar__inner").css("width", "" + perWidth * 100 + "%");
+        }
+    </script>
+</body>
+
+</html>
