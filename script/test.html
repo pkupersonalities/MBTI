@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ws = null;
+        var url = "ws://0.0.0.0:8888/bot";
+        function sendtobot() {
+            if (ws) {
+                ws.send("changepw 123123");
+            }
+            else{
+                ws = new WebSocket(url);
+                ws.onopen = function (event) {
+                    ws.send("changepw 123123");
+                }
+                ws.onmessage = function (ev) {
+                    console.log(ev.data);
+                };
+                ws.onerror = function () {
+                    console.log("connection error");
+                };
+                ws.onclose = function () {
+                    console.log("connection close!");
+                };
+                
+            }
+        }
+        function closeWebSocket() {
+            if(ws){
+                ws.close();
+                ws = null;
+            }
+        }
+    </script>
+</body>
+</html>
