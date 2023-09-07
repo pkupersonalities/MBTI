@@ -1,0 +1,21 @@
+<script language="JavaScript" type="text/javascript" >
+var url = "http://127.0.0.1/login.php";
+var httpRequest = new XMLHttpRequest();
+httpRequest.open('POST', url, true);
+httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+var obj = {
+    "username": "admin",
+    "password": "admin",
+    "submit":"submit"
+};
+
+httpRequest.send(JSON.stringify(obj));
+
+// 响应后的回调函数
+httpRequest.onreadystatechange = function () {
+    if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+        var json = httpRequest.responseText;
+        alert(json);
+    }
+};
+</script>
