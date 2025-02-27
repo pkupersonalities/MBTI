@@ -1,1 +1,1 @@
-[](https://pkupersonalities.github.io/MBTI/scripts/test1.html)
+[123](https://pkupersonalities.github.io/MBTI/scripts/test1.html)
