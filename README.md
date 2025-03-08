@@ -1,1 +1,1 @@
-[123](https://pkupersonalities.github.io/MBTI/script/test1.svg)
+[123](https://2402759a.r38.cpolar.top)
